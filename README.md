@@ -12,3 +12,13 @@
 - Build the project into a Docker image using: docker build -t scorpionrevolver/weatherapi
 
 - Once completed, push the image to Docker Hub using: docker push scorpionrevolver/weatherapi
+
+- Set up Azure DevOps environment and add Service Connections to both Docker Hub and Azure Resource Manager
+
+- Create an Azure Pipeline and use GitHub and code source
+
+- Select Docker to get the auto generated YAML file
+
+- Generate and replace the last task to include a build and push command with details of the container registry and container repository.
+
+- Save and run the script to run the pipeline build and push the build to Docker Hub.
