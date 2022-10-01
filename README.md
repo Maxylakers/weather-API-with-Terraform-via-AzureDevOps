@@ -21,4 +21,4 @@
 
 - Generate and replace the last task to include a build and push command with details of the container registry and container repository.
 
-- Save and run the script to run the pipeline build and push the build to Docker Hub.
+- Save and run the script to run the pipeline build and push the build to Docker Hub.  
