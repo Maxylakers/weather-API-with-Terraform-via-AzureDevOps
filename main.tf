@@ -5,20 +5,21 @@ terraform {
       version = "=3.5.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "terraform_state"
+    storage_account_name = "maxterrastore"
+    container_name       = "maxcontainer"
+    key                  = "terraform.tfstate"
+    access_key           = "730SvO7Rp697m4NABAaZdK+FZk4vAMP0GaMEPOUy2UpOGqcjsCfEcCo3F+5HJlsNKzXE0eCIq6Ys+AStOJCSSg=="
+    
+  }
 }
 
 provider "azurerm" {
   features {}
 }
 
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "TerraformState"
-    storage_account_name = "maxtfstatefile"
-    container_name       = "maxcontainer"
-    key                  = "terraform.tfstate"
-  }
-}
 
 variable "imagebuild" {
   type        = string
