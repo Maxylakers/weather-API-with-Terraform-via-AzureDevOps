@@ -11,14 +11,14 @@ provider "azurerm" {
   features {}
 }
 
-# terraform {
-#   backend "azurerm" {
-#     resource_group_name  = "tfmax_rg_blobstore"
-#     storage_account_name = "tfmaxstorage"
-#     container_name       = "tfstate"
-#     key                  = "terraform.tfstate"
-#   }
-# }
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "TerraformState"
+    storage_account_name = "maxtfstatefile"
+    container_name       = "maxcontainer"
+    key                  = "terraform.tfstate"
+  }
+}
 
 variable "imagebuild" {
   type        = string
